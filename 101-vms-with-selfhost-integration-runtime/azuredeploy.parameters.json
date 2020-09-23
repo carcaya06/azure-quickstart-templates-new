@@ -14,6 +14,12 @@
     "IntegrationRuntimeName": {
       "value":"GEN-UNIQUE"
     },
+    "virtualMachineName": {
+      "value": "bhgpdi-adfir-dev-eastus"
+    },
+    "vmSize": {
+      "value": "Standard_A4_v2"
+    },
     "NodeCount":{
       "value": 1
     },
@@ -31,6 +37,9 @@
     },
     "existingSubnetInYourVnet": {
       "value": "GET-PREREQ-subnetName"
+    },
+    "storageAccountName":{
+      "value": "azstgenhalodeveastus"
     },
     "existingVnetLocation": {
       "value": "GET-PREREQ-vnetLocation"

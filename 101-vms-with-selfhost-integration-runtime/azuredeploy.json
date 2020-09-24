@@ -108,7 +108,6 @@
       "_"
     ],
     "prefix": "[split(parameters('IntegrationRuntimeName'), variables('delimiters'))[0]]",
-    "storageAccountName": "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]",
     "networkSecurityGroupName": "[concat(parameters('virtualMachineName'), '-', 'nsg')]",
     "vmTemplateLink": "[uri(parameters('_artifactsLocation'), concat('nested/VMtemplate.json', parameters('_artifactsLocationSasToken')))]",
     "irInstallTemplateLink": "[uri(parameters('_artifactsLocation'), concat('nested/IRInstall.json', parameters('_artifactsLocationSasToken')))]",
@@ -206,7 +205,7 @@
             "value": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
           },
           "storageAccountName": {
-            "value": "[variables('storageAccountName')]"
+            "value": "[parameters('storageAccountName')]"
           }
         }
       }

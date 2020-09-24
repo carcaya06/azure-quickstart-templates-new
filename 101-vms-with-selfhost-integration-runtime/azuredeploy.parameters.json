@@ -39,7 +39,7 @@
       "value": "GET-PREREQ-subnetName"
     },
     "storageAccountName":{
-      "value": "azstgenhalodeveastus"
+      "value": "azstboothalodeveastus"
     },
     "existingVnetLocation": {
       "value": "GET-PREREQ-vnetLocation"

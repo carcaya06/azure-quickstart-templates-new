@@ -164,6 +164,20 @@
       }
     },
     {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[parameters('storageAccountName')]",
+      "location": "[parameters('existingVnetLocation')]",
+      "dependsOn": [
+        "[resourceId(parameters('existingDataFactoryResourceGroup'), 'Microsoft.Resources/deployments', 'nestedTemplate')]"
+      ],
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "Storage",
+      "properties": {}
+    },
+    {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-09-01",
       "name": "[concat('VMtemplate-', copyIndex())]",
